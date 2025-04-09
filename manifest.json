@@ -1,0 +1,64 @@
+{
+    "schema_version": "45D_AP_V2.0",
+    "name": "haproxy-ansible",
+    "title": "HAProxy Ansible",
+    "description": "Adaptation of rgw-loadbalancer playbooks for Ceph-Ansible2",
+    "version": "1.0.00",
+    "build_number": "201",
+    "stable": true,
+    "author": "Curtis Leblanc <cleblanc@45drives.com>",
+    "git_url": "https://github.com/45Drives/haproxy-ansible",
+    "license": "GPL-3.0+",
+    "defaults": {
+        "change_urgency": "medium"
+    },
+    "architecture": {
+        "rocky": "x86_64",
+        "debian": "amd64",
+        "ubuntu": "amd64"
+    },
+    "dependencies": {
+        "ubuntu_common": [
+            "ansible",
+            "ansible-core"
+        ],
+        "rocky_common": [
+            "ansible",
+            "ansible-core"
+        ]
+    },
+    "builds": [
+        {
+            "group": "ubuntu",
+            "os_name": "ubuntu-focal",
+            "image": "ci.cr.45d.io/ci/simple/ubuntu-focal:1"
+        },
+        {
+            "group": "ubuntu",
+            "os_name": "ubuntu-jammy",
+            "image": "ci.cr.45d.io/ci/simple/ubuntu-jammy:1"
+        },
+        {
+            "group": "rocky",
+            "os_name": "rocky-el8",
+            "image": "ci.cr.45d.io/ci/simple/rocky-el8:1"
+        },
+        {
+            "group": "rocky",
+            "os_name": "rocky-el9",
+            "image": "ci.cr.45d.io/ci/simple/rocky-el9:1"
+        }
+    ],
+    "repos": [
+        "community",
+        "enterprise"
+    ],
+    "changelog": {
+        "urgency": "medium",
+        "version": "1.0.00",
+        "build_number": "201",
+        "date": null,
+        "packager": "Curtis Leblanc <cleblanc@45drives.com>",
+        "changes": []
+    }
+}

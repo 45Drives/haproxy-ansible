@@ -1,0 +1,7 @@
+---
+- name: include prerequisite.yml
+  include_tasks: prerequisite.yml
+
+---
+- name: include start-loadbalancer.yml
+  include_tasks: start-loadbalancer.yml

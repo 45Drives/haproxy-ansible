@@ -1,0 +1,40 @@
+%global debug_package %{nil}
+%define _build_id_links none
+
+Name: {{ name }}
+Version: {{ version }}
+Release: {{ build_number }}%{?dist}
+Summary: {{ description }}
+License: {{ license }}
+URL: {{ git_url }}
+Source0: %{name}-%{version}.tar.gz
+BuildArch: {{ architecture.rocky }}
+Requires: {{ dependencies.rocky_common | join(',') }}
+
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+
+Provides:	%{name} = %{version}-%{release}
+Conflicts:	%{name}-1.7
+
+%description
+{{ title }}
+{{ description }}
+
+%prep
+%setup -q
+
+%build
+
+%install
+make DESTDIR=%{buildroot} TOOLS_VERSION="%{version}-{{ build_number }}" install
+
+%postun
+if [ $1 == 0 ];then
+    rm -rf /usr/share/haproxy-ansible
+fi
+
+%files
+/usr/share/haproxy-ansible/*
+
+%changelog
+
