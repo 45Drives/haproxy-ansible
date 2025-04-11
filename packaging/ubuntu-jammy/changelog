@@ -1,0 +1,7 @@
+haproxy-ansible (1.0.00-201jammy) jammy; urgency=medium
+
+  * Modified implementation of some variables to resolve some potential issues in
+    managing virtual interfaces. Added firewall rules for ports 80 and 8080 in addition
+    to vrrp protocol rule.
+
+ -- Curtis Leblanc <cleblanc@45drives.com>  Fri, 11 Apr 2025 13:29:37 -0300

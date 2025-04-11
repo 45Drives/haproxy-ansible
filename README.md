@@ -1,5 +1,5 @@
 # haproxy-ansible
-This playbook is designed to implement load-balancing across RGW nodes in a cluster using haproxy and keepalived.
+This playbook was designed to implement load-balancing across RGW nodes in a cluster using haproxy and keepalived.
 It is an adaptation of the rgw-loadbalancer playbook present in ceph-ansible for ceph-ansible2.
 The overal execution of the playbook is similar but handles variables differently.
 
