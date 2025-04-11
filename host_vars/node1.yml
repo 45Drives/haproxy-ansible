@@ -1,0 +1,6 @@
+---
+rgw_instances:
+  - instance_name: rgw.node1
+    radosgw_address: 192.168.98.36
+    radosgw_frontend_port: 8080
+virtual_ip_interface: ens18

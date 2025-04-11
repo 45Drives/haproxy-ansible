@@ -2,6 +2,15 @@
 - name: include prerequisite.yml
   include_tasks: prerequisite.yml
 
----
+- name: Check if firewalld is running
+  shell: systemctl is-active firewalld
+  register: firewalld_status
+  changed_when: false
+  failed_when: false
+
+- name: Include firewall rules if firewalld is active
+  include_tasks: firewall_rules.yml
+  when: firewalld_status.stdout == "active"
+
 - name: include start-loadbalancer.yml
   include_tasks: start-loadbalancer.yml

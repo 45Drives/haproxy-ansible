@@ -1,0 +1,25 @@
+---
+- name: open port 80
+  firewalld:
+    port: 80/tcp
+    permanent: true
+    state: enabled
+
+- name: open port 8080
+  firewalld:
+    port: 8080/tcp
+    permanent: true
+    state: enabled
+
+- name: Allow VRRP protocol via firewalld rich rule
+  firewalld:
+    zone: public
+    permanent: true
+    rich_rule: 'rule protocol value="vrrp" accept'
+    state: enabled
+  become: true
+
+- name: reload firewalld
+  ansible.builtin.service:
+    name: firewalld
+    state: reloaded

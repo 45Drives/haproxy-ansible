@@ -1,0 +1,14 @@
+---
+- hosts:
+  - haproxynodes
+  - rgws
+
+  gather_facts: true
+  become: true
+
+  vars:
+   delegate_facts_host: true
+
+  tasks:
+   - import_role:
+       name: haproxy

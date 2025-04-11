@@ -20,10 +20,12 @@
     "dependencies": {
         "ubuntu_common": [
             "ansible",
+            "policycoreutils-python-utils",
             "ansible-core"
         ],
         "rocky_common": [
             "ansible",
+            "policycoreutils-python-utils",
             "ansible-core"
         ]
     },
