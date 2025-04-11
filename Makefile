@@ -6,8 +6,6 @@ all:
 install:
 	mkdir -p $(DESTDIR)/usr/share/haproxy-ansible/
 
-	cp -a ansible.cfg $(DESTDIR)/usr/share/haproxy-ansible/
-	cp -a inventory.ini $(DESTDIR)/usr/share/haproxy-ansible/
 	cp -a README.MD $(DESTDIR)/usr/share/haproxy-ansible/
 	cp -a *.yml $(DESTDIR)/usr/share/haproxy-ansible/
 	cp -a *.sample $(DESTDIR)/usr/share/haproxy-ansible/
