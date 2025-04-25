@@ -3,8 +3,8 @@
     "name": "haproxy-ansible",
     "title": "HAProxy Ansible",
     "description": "Adaptation of rgw-loadbalancer playbooks for Ceph-Ansible2",
-    "version": "1.0.00",
-    "build_number": "201",
+    "version": "1.0.01",
+    "build_number": "1",
     "stable": true,
     "author": "Curtis Leblanc <cleblanc@45drives.com>",
     "git_url": "https://github.com/45Drives/haproxy-ansible",
@@ -20,8 +20,7 @@
     "dependencies": {
         "ubuntu_common": [
             "ansible",
-            "policycoreutils-python-utils",
-            "ansible-core"
+            "policycoreutils-python-utils"
         ],
         "rocky_common": [
             "ansible",
@@ -57,8 +56,8 @@
     ],
     "changelog": {
         "urgency": "medium",
-        "version": "1.0.00",
-        "build_number": "201",
+        "version": "1.0.01",
+        "build_number": "1",
         "date": null,
         "packager": "Curtis Leblanc <cleblanc@45drives.com>",
         "changes": []

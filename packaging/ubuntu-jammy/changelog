@@ -1,3 +1,9 @@
+haproxy-ansible (1.0.01-1jammy) jammy; urgency=medium
+
+  * Fixed dependency issue on Ubuntu deployments.
+
+ -- Curtis Leblanc <cleblanc@45drives.com>  Fri, 25 Apr 2025 08:19:03 -0300
+
 haproxy-ansible (1.0.00-201jammy) jammy; urgency=medium
 
   * Modified implementation of some variables to resolve some potential issues in
